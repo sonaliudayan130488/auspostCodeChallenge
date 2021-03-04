@@ -23,6 +23,7 @@ public class APIGateway {
         //make the callout
         Http h = new Http();
         HttpRequest req = new HttpRequest();
+        // it is best practice to configure url in named credentials and reference here in real world integrations
         req.setEndpoint('https://nfapihub.herokuapp.com/');
         req.setBody(jsonBody);
         req.setHeader('Authorization', 'OAuth ' + UserInfo.getSessionId());
