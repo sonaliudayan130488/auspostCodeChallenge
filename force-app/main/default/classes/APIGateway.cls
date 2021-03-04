@@ -13,8 +13,12 @@ public class APIGateway {
      */
     public static CaseDTOResponse updateCaseDetails(CaseDTORequest caseDto){
 
+        String jsonBody;
         // Build the json request body from case dto record
-        string jsonBody=Json.serialize(caseDto);
+        if(caseDto!=null){
+             jsonBody=Json.serialize(caseDto);
+
+        }
             
         //make the callout
         Http h = new Http();
