@@ -5,7 +5,7 @@
  */
 
 
-global class CaseClosureUpdateSchedule implements Schedulable {
+global class CaseClosureUpdateSchedule implements Schedulable, Database.AllowsCallouts  {
    global void execute(SchedulableContext sc) {
       CaseClosureUpdateBatch caseUpdateBatch = new CaseClosureUpdateBatch(); 
       database.executebatch(caseUpdateBatch);
