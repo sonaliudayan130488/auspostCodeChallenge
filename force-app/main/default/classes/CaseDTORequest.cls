@@ -7,4 +7,4 @@ public class CaseDTORequest {
 
    public string id;
    public string agentid;
-}
+} 
