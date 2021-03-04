@@ -6,6 +6,7 @@
 
 public class TestDataFactory {
     
+    // create records in bulk for case object, size is the number of records to be created
     public static List<Case> createTestCaseRecords(integer size){
          list<Case> caseRecordsList = new List<Case>();
          for(integer i=0;i<size;i++){
