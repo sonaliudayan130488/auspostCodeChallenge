@@ -14,8 +14,6 @@ global class CaseClosureUpdateBatch implements Database.Batchable<sObject>, Data
     global Database.QueryLocator start(Database.BatchableContext bc){
         // Fetch the records that have been closed today ,IsClosedOnCreate is false and Secret key is blank
         String query = 'SELECT  id, Secret_Key__c,Closed_By_User__c From Case where ClosedDate>=:closureDate and  Secret_Key__c=null';
-
-       // String query = 'SELECT  id, Secret_Key__c From Case where ClosedDate=:closureDate and IsClosedOnCreate=false and Secret_Key__c=null';
         return Database.getQueryLocator(query);
     }
     
